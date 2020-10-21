@@ -23,7 +23,7 @@ android {
     compileSdkVersion rootProject.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.example.android.uamp.next"
+        applicationId "com.android.uamp.chillin.next"
 
         minSdkVersion 21
         targetSdkVersion rootProject.targetSdkVersion

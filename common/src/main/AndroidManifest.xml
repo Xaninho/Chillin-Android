@@ -16,7 +16,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.uamp.media">
+    package="com.android.uamp.chillin.media">
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -38,8 +38,8 @@
         </receiver>
 
         <provider
-            android:name=".library.AlbumArtContentProvider"
-            android:authorities="com.example.android.uamp.media.library.provider"
+            android:name="com.android.uamp.chillin.media.library.AlbumArtContentProvider"
+            android:authorities="com.android.uamp.chillin.media.library.provider"
             android:exported="true" />
 
     </application>

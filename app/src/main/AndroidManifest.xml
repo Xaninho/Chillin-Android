@@ -17,7 +17,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.android.uamp">
+    package="com.android.uamp.chillin">
 
     <application
         android:allowBackup="true"
@@ -38,9 +38,9 @@
 
         <!-- Declare that UAMP supports Cast. -->
         <meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
-            android:value="com.example.android.uamp.cast.UampCastOptionsProvider"/>
+            android:value="com.android.uamp.chillin.cast.UampCastOptionsProvider"/>
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.android.uamp.chillin.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -82,7 +82,7 @@
         with the Android Auto app.
         -->
         <service
-            android:name=".media.MusicService"
+            android:name="com.android.uamp.chillin.media.MusicService"
             android:enabled="true"
             android:exported="true"
             tools:ignore="ExportedService">

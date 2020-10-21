@@ -23,7 +23,7 @@ android {
     compileSdkVersion rootProject.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.example.android.uamp.next"
+        applicationId "com.android.uamp.chillin"
         versionCode 1
         versionName "1.0"
 
