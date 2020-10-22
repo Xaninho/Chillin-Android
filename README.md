@@ -1,65 +1,50 @@
-Universal Android Music Player Sample
-=====================================
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  
+  <img src="https://cdn3.iconfinder.com/data/icons/multimedia-19/512/Cassette-512.png" alt="Logo" width="150" height="150">
+  <h3 align="center">Chillin'</h3>
 
-The goal of this sample is to show how to implement an audio media app that works
-across multiple form factors and provides a consistent user experience
-on Android phones, tablets, Android Auto, Android Wear, Android TV, Google Cast devices,
-and with the Google Assistant. 
+  <p align="center">
+    Brain Food from Heaven's Kitchen :notes: :ramen:
+    <br />
+    <a href="https://github.com/Xaninho/Chillin/wiki"><strong>Explore the Wiki</strong></a>
+    <br />
+  </p>
 
-To get started with UAMP please read the [full guide](docs/FullGuide.md).
+## Table of Contents 
 
-![Screenshot showing UAMP's UI for browsing albums and songs](docs/images/1-browse-albums-screenshot.png "Browse albums screenshot")
-![Screenshot showing UAMP's UI for playing a song](docs/images/2-play-song-screenshot.png "Play song screenshot")
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Contributing](#contributing)
+* [Contact](#contact)
 
-Pre-requisites
---------------
 
-- Android Studio 3.x
+## About The Project
 
-Getting Started
----------------
+:hammer: This project is currently under construction and in its early stages! :wrench:
 
-This sample uses the Gradle build system. To build this project, use the
-"gradlew build" command or use "Import Project" in Android Studio.
+Chillin is an independent project currently developed by a student, with the scope of creating a convenient Lo-Fi on-line music repository, offering the user access to an online radio and to several playlists placed and verified by the author of the application.
 
-Support
--------
+It's built on top of the [UAMP](https://github.com/android/uamp) architecture, which is the most solid way to begin developing an Audio app.
 
-- Stack Overflow: http://stackoverflow.com/questions/tagged/android
+### Built With
+* [Android Studio](https://developer.android.com/studio)
+* [Kotlin](https://kotlinlang.org/)
+* [Firebase](https://firebase.google.com/)
 
-If you've found an error in this sample, please
-[file an issue](https://github.com/googlesamples/android-UniversalMusicPlayer/issues)
+## Contributing
 
-Patches are encouraged and may be submitted by forking this project and
-submitting a pull request through GitHub. Please see [CONTRIBUTING.md](CONTRIBUTING.md) for more
-details.
+Contributions are always welcome! There are always room for improvements and any tips you could give to the community would be **greatly appreciated** as well!
 
-Music
------
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Music provided by the [Free Music Archive](http://freemusicarchive.org/).
 
-- [Irsen's Tale](http://freemusicarchive.org/music/Kai_Engel/Irsens_Tale/) by
-[Kai Engel](http://freemusicarchive.org/music/Kai_Engel/).
-- [Wake Up](http://freemusicarchive.org/music/The_Kyoto_Connection/Wake_Up_1957/) by
-[The Kyoto Connection](http://freemusicarchive.org/music/The_Kyoto_Connection/).
+## Contact
 
-License
--------
-
-Copyright 2017 Google Inc.
-
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
+Project Link: [https://github.com/Xaninho/Chillin](https://github.com/Xaninho/Chillin)
+LinkedIn: [Alexandre Neves](https://www.linkedin.com/in/alexandre-neves-ninja/)
