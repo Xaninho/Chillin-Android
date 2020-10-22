@@ -21,14 +21,20 @@ import android.os.Bundle
 import android.view.Menu
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import com.android.uamp.chillin.fragments.FavoritesFragment
+import com.android.uamp.chillin.fragments.LibraryFragment
 import com.android.uamp.chillin.fragments.MediaItemFragment
+import com.android.uamp.chillin.fragments.RadioFragment
 import com.android.uamp.chillin.media.MusicService
 import com.android.uamp.chillin.utils.Event
 import com.android.uamp.chillin.utils.InjectorUtils
 import com.android.uamp.chillin.viewmodels.MainActivityViewModel
 import com.google.android.gms.cast.framework.CastButtonFactory
 import com.google.android.gms.cast.framework.CastContext
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.activity_main.bottom_navigation
 
 class MainActivity : AppCompatActivity() {
 
@@ -69,11 +75,14 @@ class MainActivity : AppCompatActivity() {
          * Observe changes to the [MainActivityViewModel.rootMediaId]. When the app starts,
          * and the UI connects to [MusicService], this will be updated and the app will show
          * the initial list of media items.
-         */
-        viewModel.rootMediaId.observe(this,
-            Observer<String> { rootMediaId ->
-                rootMediaId?.let { navigateToMediaItem(it) }
+
+            viewModel.rootMediaId.observe(this,
+                Observer<String> { rootMediaId ->
+                    rootMediaId?.let { navigateToMediaItem(it)
+                }
             })
+
+        */
 
         /**
          * Observe [MainActivityViewModel.navigateToMediaItem] for [Event]s indicating
@@ -84,6 +93,14 @@ class MainActivity : AppCompatActivity() {
                 navigateToMediaItem(mediaId)
             }
         })
+
+        bottom_navigation.setOnNavigationItemSelectedListener(navListener)
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction().replace(
+                R.id.fragmentContainer,
+                RadioFragment()
+            ).commit()
+        }
     }
 
     @Override
@@ -113,4 +130,21 @@ class MainActivity : AppCompatActivity() {
     private fun getBrowseFragment(mediaId: String): MediaItemFragment? {
         return supportFragmentManager.findFragmentByTag(mediaId) as MediaItemFragment?
     }
+
+    private val navListener: BottomNavigationView.OnNavigationItemSelectedListener =
+        BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            var selectedFragment: Fragment? = null
+            when (item.itemId) {
+                R.id.nav_radio -> selectedFragment = RadioFragment()
+                R.id.nav_library -> selectedFragment = LibraryFragment()
+                R.id.nav_favorites -> selectedFragment = FavoritesFragment()
+            }
+            if (selectedFragment != null) {
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.fragmentContainer,
+                    selectedFragment
+                ).commit()
+            }
+            true
+        }
 }

@@ -43,4 +43,9 @@
     <!-- Browse Tree -->
     <string name="recommended_title">Recommended</string>
     <string name="albums_title">Albums</string>
+
+    <!-- Bottom Navigation Bar -->
+    <string name="Radio">Radio</string>
+    <string name="Library">Library</string>
+    <string name="Favorites">Favorites</string>
 </resources>

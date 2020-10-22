@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_radio"
+        android:icon="@drawable/ic_radio"
+        android:title="@string/Radio"
+        android:visible="true"
+        android:enabled="true"
+        />
+
+    <item
+        android:id="@+id/nav_library"
+        android:icon="@drawable/ic_library"
+        android:title="@string/Library"
+        android:visible="true"
+        android:enabled="true"
+        />
+
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/ic_favorites"
+        android:title="@string/Favorites"
+        android:visible="true"
+        android:enabled="true"
+        />
+
+</menu>
