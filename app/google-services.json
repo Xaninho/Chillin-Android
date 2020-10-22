@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "126044047098",
+    "firebase_url": "https://chillin-radiowave.firebaseio.com",
+    "project_id": "chillin-radiowave",
+    "storage_bucket": "chillin-radiowave.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126044047098:android:dd08e3e12ce2f481ebab43",
+        "android_client_info": {
+          "package_name": "com.android.uamp.chillin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126044047098-punqid9rjqaogh0tb78ch1jj1qvho0jf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-jLg0MPM-C8GQyFEDej2f5CoXi_FybJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126044047098-punqid9rjqaogh0tb78ch1jj1qvho0jf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
