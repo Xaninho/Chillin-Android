@@ -21,6 +21,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/materialGray</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
     <!--Splash Theme-->

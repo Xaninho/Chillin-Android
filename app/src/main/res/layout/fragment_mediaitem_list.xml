@@ -29,7 +29,8 @@
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:context="com.android.uamp.chillin.fragments.MediaItemFragment"
-        tools:listitem="@layout/fragment_mediaitem" />
+        tools:listitem="@layout/fragment_mediaitem"
+        android:background="@color/materialBlack"/>
 
     <ProgressBar
         android:id="@+id/loadingSpinner"
@@ -42,9 +43,9 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_gravity="center"
-        android:tint="@color/colorAccent"
         android:visibility="gone"
-        app:srcCompat="@drawable/ic_signal_wifi_off_black_24dp" />
+        app:srcCompat="@drawable/ic_signal_wifi_off_black_24dp"
+        app:tint="@color/colorAccent" />
 
 </FrameLayout>
 

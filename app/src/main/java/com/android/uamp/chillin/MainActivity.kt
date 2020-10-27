@@ -137,6 +137,13 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.nav_radio -> selectedFragment = RadioFragment()
                 R.id.nav_library -> selectedFragment = LibraryFragment()
+                /*R.id.nav_library -> {
+                    viewModel.rootMediaId.observe(this,
+                        Observer<String> { rootMediaId ->
+                            rootMediaId?.let { navigateToMediaItem(it)
+                            }
+                        })
+                }*/
                 R.id.nav_favorites -> selectedFragment = FavoritesFragment()
             }
             if (selectedFragment != null) {

@@ -27,5 +27,21 @@
     <string name="duration_unknown">--:--</string>
     <string name="duration_format">%d:%02d</string>
 
+    <string name="contentDescription_play">Play &amp; Pause Button</string>
+    <string name="contentDescription_previous">Skip to previous music</string>
+    <string name="contentDescription_forward">Skip to forward music</string>
+    <string name="contentDescription_favorite">Add to Favorite</string>
+    <string name="contentDescription_shuffle">Shuffle the order of musics</string>
+    <string name="contentDescription_artistInfo">Shuffle the order of musics</string>
+    <string name="contentDescription_close">Close the Music Player</string>
+    <string name="contentDescription_titleFavorites">Favorites Screen</string>
+    <string name="contentDescription_titleRadio">Radio Screen</string>
+    <string name="contentDescription_titleLibrary">Library Screen</string>
+    <string name="contentDescription_coffee">Morning Coffee</string>
+    <string name="contentDescription_nocturnal">Nocturnal Vibes</string>
+    <string name="contentDescription_oriental">Oriental World</string>
+    <string name="contentDescription_rain">Rainy Days</string>
+    <string name="contentDescription_focus">Gentle Focus</string>
+
     <string name="cast_context_error">Failed to get Cast context. Try updating Google Play Services and restart the app.</string>
 </resources>
