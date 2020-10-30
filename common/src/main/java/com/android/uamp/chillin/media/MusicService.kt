@@ -124,7 +124,7 @@ open class MusicService : MediaBrowserServiceCompat() {
     private var isForegroundService = false
 
     private val remoteJsonSource: Uri =
-        Uri.parse("https://storage.googleapis.com/uamp/catalog.json")
+        Uri.parse("https://raw.githubusercontent.com/Xaninho/Chillin/master/common/src/main/res/values/music_list.json")
 
     private val uAmpAudioAttributes = AudioAttributes.Builder()
         .setContentType(C.CONTENT_TYPE_MUSIC)
