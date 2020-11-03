@@ -147,8 +147,8 @@ class MediaItemFragmentViewModel(
         val isPlaying = musicServiceConnection.playbackState.value?.isPlaying ?: false
         return when {
             !isActive -> NO_RES
-            isPlaying -> R.drawable.ic_pause_black_24dp
-            else -> R.drawable.ic_play_arrow_black_24dp
+            isPlaying -> R.drawable.ic_pause
+            else -> R.drawable.ic_play
         }
     }
 
@@ -158,8 +158,8 @@ class MediaItemFragmentViewModel(
     ): List<MediaItemData> {
 
         val newResId = when (playbackState.isPlaying) {
-            true -> R.drawable.ic_pause_black_24dp
-            else -> R.drawable.ic_play_arrow_black_24dp
+            true -> R.drawable.ic_pause
+            else -> R.drawable.ic_play
         }
 
         return mediaItems.value?.map {

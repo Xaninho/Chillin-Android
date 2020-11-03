@@ -17,21 +17,25 @@
 package com.android.uamp.chillin.fragments
 
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import com.bumptech.glide.Glide
 import com.android.uamp.chillin.R
 import com.android.uamp.chillin.databinding.FragmentNowplayingBinding
 import com.android.uamp.chillin.utils.InjectorUtils
 import com.android.uamp.chillin.viewmodels.MainActivityViewModel
 import com.android.uamp.chillin.viewmodels.NowPlayingFragmentViewModel
 import com.android.uamp.chillin.viewmodels.NowPlayingFragmentViewModel.NowPlayingMetadata
+import com.bumptech.glide.Glide
+
 
 /**
  * A fragment representing the current media item being played.
@@ -58,8 +62,14 @@ class NowPlayingFragment : Fragment() {
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val toolbar: Toolbar = view.findViewById(R.id.toolbar)
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back)
+        toolbar.title = "Music Playing"
+        toolbar.setNavigationOnClickListener { activity?.onBackPressed() }
 
         // Always true, but lets lint know that as well.
         val context = activity ?: return

@@ -24,7 +24,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import com.android.uamp.chillin.MainActivity
 import com.android.uamp.chillin.MediaItemAdapter
+import com.android.uamp.chillin.R
 import com.android.uamp.chillin.databinding.FragmentMediaitemListBinding
 import com.android.uamp.chillin.utils.InjectorUtils
 import com.android.uamp.chillin.viewmodels.MainActivityViewModel
@@ -64,6 +66,7 @@ class MediaItemFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMediaitemListBinding.inflate(inflater, container, false)
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.app_name)
         return binding.root
     }
 
