@@ -85,6 +85,13 @@ class MainActivityViewModel(
         }
     }
 
+    fun skipToNext(){
+        musicServiceConnection.transportControls.skipToNext()
+    }
+
+    fun skipToPrevious(){
+        musicServiceConnection.transportControls.skipToPrevious()
+    }
 
     /**
      * Convenience method used to swap the fragment shown in the main activity
