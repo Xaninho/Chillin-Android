@@ -22,6 +22,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SeekBar
+import android.widget.SeekBar.OnSeekBarChangeListener
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
@@ -35,6 +37,7 @@ import com.android.uamp.chillin.viewmodels.MainActivityViewModel
 import com.android.uamp.chillin.viewmodels.NowPlayingFragmentViewModel
 import com.android.uamp.chillin.viewmodels.NowPlayingFragmentViewModel.NowPlayingMetadata
 import com.bumptech.glide.Glide
+import kotlinx.android.synthetic.main.fragment_nowplaying.seekBar
 
 
 /**
@@ -84,6 +87,7 @@ class NowPlayingFragment : Fragment() {
         nowPlayingViewModel.mediaPosition.observe(viewLifecycleOwner,
             Observer { pos ->
                 binding.position.text = NowPlayingMetadata.timestampToMSS(context, pos)
+                binding.seekBar.progress = pos.toInt()
             })
 
         // Setup UI handlers for buttons
@@ -96,6 +100,14 @@ class NowPlayingFragment : Fragment() {
         binding.skipPrevious.setOnClickListener {
             mainActivityViewModel.skipToPrevious()
         }
+
+        seekBar.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                 if (fromUser) mainActivityViewModel.seekTo(progress.toLong())
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar) {}
+        })
 
         // Initialize playback duration and position to zero
         binding.duration.text = NowPlayingMetadata.timestampToMSS(context, 0L)
@@ -116,5 +128,6 @@ class NowPlayingFragment : Fragment() {
         title.text = metadata.title
         subtitle.text = metadata.subtitle
         duration.text = metadata.duration
+        seekBar.max = NowPlayingMetadata.timestampToMILL(metadata.duration, 0L).toInt()
     }
 }

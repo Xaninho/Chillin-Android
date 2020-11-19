@@ -41,6 +41,7 @@ import com.android.uamp.chillin.media.extensions.duration
 import com.android.uamp.chillin.media.extensions.id
 import com.android.uamp.chillin.media.extensions.isPlaying
 import com.android.uamp.chillin.media.extensions.title
+import java.util.concurrent.TimeUnit
 
 /**
  * [ViewModel] for [NowPlayingFragment] which displays the album art in full size.
@@ -74,6 +75,19 @@ class NowPlayingFragmentViewModel(
                 val remainingSeconds = totalSeconds - (minutes * 60)
                 return if (position < 0) context.getString(R.string.duration_unknown)
                 else context.getString(R.string.duration_format).format(minutes, remainingSeconds)
+            }
+
+            fun timestampToMILL(time: String, position: Long): Long {
+
+                val data = time.split(":").toTypedArray()
+
+                val minutes = data[0].toInt()
+                val seconds = data[1].toInt()
+
+                val timefinal = seconds + 60 * minutes
+
+                return TimeUnit.MILLISECONDS.convert(timefinal.toLong(), TimeUnit.SECONDS)
+
             }
         }
     }

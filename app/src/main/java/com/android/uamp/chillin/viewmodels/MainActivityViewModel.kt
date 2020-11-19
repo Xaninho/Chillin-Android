@@ -93,6 +93,10 @@ class MainActivityViewModel(
         musicServiceConnection.transportControls.skipToPrevious()
     }
 
+    fun seekTo(position: Long){
+        musicServiceConnection.transportControls.seekTo(position)
+    }
+
     /**
      * Convenience method used to swap the fragment shown in the main activity
      *
