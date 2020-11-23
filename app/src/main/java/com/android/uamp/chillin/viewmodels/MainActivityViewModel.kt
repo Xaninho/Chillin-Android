@@ -16,8 +16,11 @@
 
 package com.android.uamp.chillin.viewmodels
 
+import android.content.ContentValues
+import android.content.Context
 import android.support.v4.media.MediaBrowserCompat
 import android.util.Log
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -27,12 +30,19 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.android.uamp.chillin.MainActivity
 import com.android.uamp.chillin.MediaItemData
+import com.android.uamp.chillin.R
+import com.android.uamp.chillin.common.DatabaseHandler
 import com.android.uamp.chillin.common.MusicServiceConnection
 import com.android.uamp.chillin.fragments.NowPlayingFragment
+import com.android.uamp.chillin.media.extensions.album
+import com.android.uamp.chillin.media.extensions.artUri
+import com.android.uamp.chillin.media.extensions.artist
 import com.android.uamp.chillin.media.extensions.id
 import com.android.uamp.chillin.media.extensions.isPlayEnabled
 import com.android.uamp.chillin.media.extensions.isPlaying
 import com.android.uamp.chillin.media.extensions.isPrepared
+import com.android.uamp.chillin.media.extensions.mediaUri
+import com.android.uamp.chillin.media.extensions.title
 import com.android.uamp.chillin.utils.Event
 
 /**
@@ -95,6 +105,34 @@ class MainActivityViewModel(
 
     fun seekTo(position: Long){
         musicServiceConnection.transportControls.seekTo(position)
+    }
+
+    fun favoriteMusic(context: Context): Boolean{
+        val dbHelper = DatabaseHandler(context)
+
+        if(!dbHelper.VerifyFavoriteMusic(musicServiceConnection.nowPlaying.value!!.title!!)){
+
+            val dbWriter = dbHelper.writableDatabase
+
+            val values = ContentValues().apply {
+                put(DatabaseHandler.COLUMN_NAME, musicServiceConnection.nowPlaying.value!!.title)
+                put(DatabaseHandler.COLUMN_ARTIST, musicServiceConnection.nowPlaying.value!!.artist)
+                put(DatabaseHandler.COLUMN_ALBUM, musicServiceConnection.nowPlaying.value!!.album)
+                put(DatabaseHandler.COLUMN_MUSIC_URL, musicServiceConnection.nowPlaying.value!!.mediaUri.toString())
+                put(DatabaseHandler.COLUMN_IMAGE_URL, musicServiceConnection.nowPlaying.value!!.artUri.toString())
+            }
+
+            dbWriter?.insert(DatabaseHandler.TABLE_NAME, null, values)
+            return true
+        } else {
+            dbHelper.UnFavoriteMusic(musicServiceConnection.nowPlaying.value!!.title!!)
+            return false
+        }
+    }
+
+    fun verifyMusic(context: Context): Boolean{
+        val dbHelper = DatabaseHandler(context)
+        return dbHelper.VerifyFavoriteMusic(musicServiceConnection.nowPlaying.value!!.title!!)
     }
 
     /**

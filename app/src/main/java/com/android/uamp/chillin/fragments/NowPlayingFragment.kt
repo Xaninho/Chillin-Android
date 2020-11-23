@@ -16,6 +16,7 @@
 
 package com.android.uamp.chillin.fragments
 
+import android.content.ContentValues
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -24,6 +25,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
@@ -31,6 +33,10 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.android.uamp.chillin.R
+import com.android.uamp.chillin.common.DatabaseHandler
+import com.android.uamp.chillin.common.DatabaseHandler.Companion.COLUMN_ARTIST
+import com.android.uamp.chillin.common.DatabaseHandler.Companion.COLUMN_NAME
+import com.android.uamp.chillin.common.DatabaseHandler.Companion.TABLE_NAME
 import com.android.uamp.chillin.databinding.FragmentNowplayingBinding
 import com.android.uamp.chillin.utils.InjectorUtils
 import com.android.uamp.chillin.viewmodels.MainActivityViewModel
@@ -101,7 +107,17 @@ class NowPlayingFragment : Fragment() {
             mainActivityViewModel.skipToPrevious()
         }
 
-        seekBar.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
+        binding.favoriteButton.setOnClickListener {
+            if (mainActivityViewModel.favoriteMusic(context)){
+                binding.favoriteButton.setImageResource(R.drawable.ic_fav_fill)
+                Toast.makeText(view.context,"Added to the Favourites", Toast.LENGTH_SHORT).show()
+            } else {
+                binding.favoriteButton.setImageResource(R.drawable.ic_fav_empty)
+                Toast.makeText(view.context,"Removed from the Favourites", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        binding.seekBar.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                  if (fromUser) mainActivityViewModel.seekTo(progress.toLong())
             }
@@ -129,5 +145,12 @@ class NowPlayingFragment : Fragment() {
         subtitle.text = metadata.subtitle
         duration.text = metadata.duration
         seekBar.max = NowPlayingMetadata.timestampToMILL(metadata.duration, 0L).toInt()
+
+        if (mainActivityViewModel.verifyMusic(view.context)) {
+            favoriteButton.setImageResource(R.drawable.ic_fav_fill)
+        } else {
+            favoriteButton.setImageResource(R.drawable.ic_fav_empty)
+        }
+
     }
 }
