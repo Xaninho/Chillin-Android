@@ -16,7 +16,6 @@
 
 package com.android.uamp.chillin.fragments
 
-import android.content.ContentValues
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -33,17 +32,12 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.android.uamp.chillin.R
-import com.android.uamp.chillin.common.DatabaseHandler
-import com.android.uamp.chillin.common.DatabaseHandler.Companion.COLUMN_ARTIST
-import com.android.uamp.chillin.common.DatabaseHandler.Companion.COLUMN_NAME
-import com.android.uamp.chillin.common.DatabaseHandler.Companion.TABLE_NAME
 import com.android.uamp.chillin.databinding.FragmentNowplayingBinding
 import com.android.uamp.chillin.utils.InjectorUtils
 import com.android.uamp.chillin.viewmodels.MainActivityViewModel
 import com.android.uamp.chillin.viewmodels.NowPlayingFragmentViewModel
 import com.android.uamp.chillin.viewmodels.NowPlayingFragmentViewModel.NowPlayingMetadata
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.fragment_nowplaying.seekBar
 
 
 /**
