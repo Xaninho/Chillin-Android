@@ -56,6 +56,23 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
 
     }
 
+    fun getMusicBasicInfo(): ArrayList<HashMap<String, String>> {
+        val db = this.readableDatabase
+        val favoriteList: ArrayList<HashMap<String, String>> = ArrayList()
+
+        val query = "SELECT $COLUMN_NAME, $COLUMN_ARTIST, $COLUMN_ALBUM FROM $TABLE_NAME"
+        val cursor = db.rawQuery(query, null)
+        while (cursor.moveToNext()) {
+            val music: HashMap<String, String> = HashMap()
+            music["name"] = cursor.getString(cursor.getColumnIndex(COLUMN_NAME))
+            music["artist"] = cursor.getString(cursor.getColumnIndex(COLUMN_ARTIST))
+            music["album"] = cursor.getString(cursor.getColumnIndex(COLUMN_ALBUM))
+            favoriteList.add(music)
+        }
+        cursor.close()
+        return favoriteList
+    }
+
     companion object {
 
         const val DATABASE_VERSION = 1
