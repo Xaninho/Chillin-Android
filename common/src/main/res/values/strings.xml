@@ -48,4 +48,14 @@
     <string name="Radio">Radio</string>
     <string name="Library">Library</string>
     <string name="Favorites">Favorites</string>
+
+    <!-- Favorite Item Menu -->
+    <string name="fav_menuDelete">Remove from Favorites</string>
+    <string name="fav_menuSearch">Search on Google</string>
+    <string name="fav_menuCopy">Copy to Clipboard</string>
+    <string name="clipboard">Music copied to the clipboard!</string>
+
+    <string name="fav_remove">Music removed from Favorites :c</string>
+    <string name="fav_add">Music Added to Favorites!</string>
+
 </resources>

@@ -104,10 +104,10 @@ class NowPlayingFragment : Fragment() {
         binding.favoriteButton.setOnClickListener {
             if (mainActivityViewModel.favoriteMusic(context)){
                 binding.favoriteButton.setImageResource(R.drawable.ic_fav_fill)
-                Toast.makeText(view.context,"Added to the Favourites", Toast.LENGTH_SHORT).show()
+                Toast.makeText(view.context, R.string.fav_add, Toast.LENGTH_SHORT).show()
             } else {
                 binding.favoriteButton.setImageResource(R.drawable.ic_fav_empty)
-                Toast.makeText(view.context,"Removed from the Favourites", Toast.LENGTH_SHORT).show()
+                Toast.makeText(view.context, R.string.fav_remove, Toast.LENGTH_SHORT).show()
             }
         }
 

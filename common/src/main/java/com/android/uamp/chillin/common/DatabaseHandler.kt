@@ -60,10 +60,11 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
         val db = this.readableDatabase
         val favoriteList: ArrayList<HashMap<String, String>> = ArrayList()
 
-        val query = "SELECT $COLUMN_NAME, $COLUMN_ARTIST, $COLUMN_ALBUM FROM $TABLE_NAME"
+        val query = "SELECT $COLUMN_MUSIC_ID, $COLUMN_NAME, $COLUMN_ARTIST, $COLUMN_ALBUM FROM $TABLE_NAME"
         val cursor = db.rawQuery(query, null)
         while (cursor.moveToNext()) {
             val music: HashMap<String, String> = HashMap()
+            music["id"] = cursor.getString(cursor.getColumnIndex(COLUMN_MUSIC_ID))
             music["name"] = cursor.getString(cursor.getColumnIndex(COLUMN_NAME))
             music["artist"] = cursor.getString(cursor.getColumnIndex(COLUMN_ARTIST))
             music["album"] = cursor.getString(cursor.getColumnIndex(COLUMN_ALBUM))
