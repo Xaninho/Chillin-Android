@@ -16,7 +16,7 @@ body {
 }
 
 a {
-  color: #1dc8cd;
+  color: #009999;
   transition: 0.5s;
 }
 
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  background: linear-gradient(45deg, #1de099, #1dc8cd);
+  background: linear-gradient(45deg, #8A33D2, #009999);
   color: #fff;
   padding: 2px 20px 8px 20px;
   font-size: 16px;
@@ -53,13 +53,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top:focus {
-  background: linear-gradient(45deg, #1de099, #1dc8cd);
+  background: linear-gradient(45deg, #8A33D2, #009999);
   color: #fff;
   outline: none;
 }
 
 .back-to-top:hover {
-  background: #1dc8cd;
+  background: #009999;
   color: #fff;
 }
 
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-  background: linear-gradient(45deg, #1de099, #1dc8cd);
+  background: linear-gradient(45deg, #8A33D2, #009999);
 }
 
 #header #logo {
@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-fixed {
-  background: linear-gradient(45deg, #1de099, #1dc8cd);
+  background: linear-gradient(45deg, rgba(138, 51, 210, 0.8), rgba(0, 153, 153, 8));
   padding: 20px 0;
   height: 72px;
   transition: all 0.5s;
@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 #intro {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8)), url("../img/intro-bg.jpg") center top no-repeat;
+  background: linear-gradient(45deg, #8A33D2, rgba(29, 200, 205, 0.8)), url("../img/fireplace.jpg") center top no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -144,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
 #intro .intro-text {
   position: absolute;
   left: 0;
-  top: 60px;
+  top: 70px;
   right: 0;
   height: calc(50% - 60px);
   display: flex;
@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #intro .btn-get-started:hover {
-  color: #1dc8cd;
+  color: #009999;
   background: #fff;
 }
 
@@ -210,7 +210,6 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   bottom: 0;
   overflow: hidden;
-  text-align: center;
   width: 100%;
   height: 50%;
 }
@@ -379,7 +378,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu ul li:hover > a {
-  color: #1dc8cd;
+  color: #009999;
 }
 
 .nav-menu ul ul {
@@ -466,11 +465,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #1dc8cd;
+  color: #009999;
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #1dc8cd;
+  color: #009999;
 }
 
 #mobile-body-overly {
@@ -520,8 +519,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: block;
   width: 60px;
   height: 3px;
-  background: #1dc8cd;
-  background: linear-gradient(0deg, #1dc8cd 0%, #55fabe 100%);
+  background: #009999;
+  background: linear-gradient(0deg, #009999 0%, #55fabe 100%);
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -643,7 +642,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #about .content i {
   font-size: 20px;
   padding-right: 4px;
-  color: #1dc8cd;
+  color: #009999;
 }
 
 #about .content ul {
@@ -695,8 +694,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #features .icon i:before {
-  background: #1dc8cd;
-  background: linear-gradient(45deg, #1dc8cd 0%, #55fabe 100%);
+  background: #009999;
+  background: linear-gradient(45deg, #009999 0%, #55fabe 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -762,8 +761,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #advanced-features i:before {
-  background: #1dc8cd;
-  background: linear-gradient(45deg, #1dc8cd 0%, #55fabe 100%);
+  background: #009999;
+  background: linear-gradient(45deg, #009999 0%, #55fabe 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -799,7 +798,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 #call-to-action {
   overflow: hidden;
-  background: linear-gradient(rgba(29, 200, 205, 0.65), rgba(29, 205, 89, 0.2)), url(../img/call-to-action-bg.jpg) fixed center center;
+  background: linear-gradient(rgba(138, 51, 210, 0.65), rgba(0, 153, 153, 0.5)), url(../img/cassettes.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0;
 }
@@ -837,8 +836,28 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #call-to-action .cta-btn:hover {
-  background: #1dc8cd;
-  border: 2px solid #1dc8cd;
+  background: #009999;
+  border: 2px solid #009999;
+}
+
+#github .cta-btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 25px;
+  transition: background 0.5s;
+  margin: 10px;
+  border: 2px solid #009999;
+  color: #009999;
+}
+
+#github .cta-btn:hover {
+  background: #009999;
+  border: 2px solid #009999;
+  color:white;
 }
 
 /* More Features Section
@@ -868,8 +887,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #more-features .icon i:before {
-  background: #1dc8cd;
-  background: linear-gradient(45deg, #1dc8cd 0%, #55fabe 100%);
+  background: #009999;
+  background: linear-gradient(45deg, #009999 0%, #55fabe 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -950,7 +969,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #pricing h4 {
   font-size: 46px;
-  color: #1dc8cd;
+  color: #009999;
   font-weight: 300;
 }
 
@@ -977,7 +996,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #pricing ul i {
-  color: #1dc8cd;
+  color: #009999;
   font-size: 18px;
   padding-right: 4px;
 }
@@ -995,11 +1014,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #pricing .featured {
-  border: 2px solid #1dc8cd;
+  border: 2px solid #009999;
 }
 
 #pricing .featured .get-started-btn {
-  background: linear-gradient(45deg, #1de099, #1dc8cd);
+  background: linear-gradient(45deg, rgba(138, 51, 210, 0.65), rgba(0, 153, 153, 0.5));
 }
 
 /* Frequently Asked Questions Section
@@ -1050,7 +1069,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #faq #faq-list a.collapse {
-  color: #1dc8cd;
+  color: #009999;
 }
 
 #faq #faq-list a.collapsed {
@@ -1104,7 +1123,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #team .member .social a:hover {
-  color: #1dc8cd;
+  color: #009999;
 }
 
 #team .member .social i {
@@ -1175,7 +1194,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: 300;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #1dc8cd;
+  color: #009999;
 }
 
 #contact .contact-about p {
@@ -1193,7 +1212,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 18px;
   display: inline-block;
   background: #fff;
-  color: #1dc8cd;
+  color: #009999;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1202,11 +1221,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 36px;
   height: 36px;
   transition: 0.3s;
-  border: 1px solid #1dc8cd;
+  border: 1px solid #009999;
 }
 
 #contact .social-links a:hover {
-  background: #1dc8cd;
+  background: #009999;
   color: #fff;
 }
 
@@ -1216,7 +1235,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #contact .info i {
   font-size: 32px;
-  color: #1dc8cd;
+  color: #009999;
   float: left;
   line-height: 1;
 }
@@ -1280,11 +1299,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .php-email-form input::focus, #contact .php-email-form textarea::focus {
-  background-color: #1dc8cd;
+  background-color: #009999;
 }
 
 #contact .php-email-form button[type="submit"] {
-  background: linear-gradient(45deg, #1de099, #1dc8cd);
+  background: linear-gradient(45deg, #8A33D2, #009999);
   border: 0;
   border-radius: 20px;
   padding: 8px 30px;
@@ -1339,5 +1358,5 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-links a:hover {
-  color: #1dc8cd;
+  color: #009999;
 }
