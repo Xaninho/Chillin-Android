@@ -26,7 +26,6 @@ import androidx.lifecycle.Observer
 import com.android.uamp.chillin.fragments.FavoritesFragment
 import com.android.uamp.chillin.fragments.LibraryFragment
 import com.android.uamp.chillin.fragments.MediaItemFragment
-import com.android.uamp.chillin.fragments.RadioFragment
 import com.android.uamp.chillin.media.MusicService
 import com.android.uamp.chillin.utils.Event
 import com.android.uamp.chillin.utils.InjectorUtils
@@ -98,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction().replace(
                 R.id.fragmentContainer,
-                RadioFragment()
+                LibraryFragment()
             ).commit()
         }
     }
@@ -135,7 +134,6 @@ class MainActivity : AppCompatActivity() {
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             var selectedFragment: Fragment? = null
             when (item.itemId) {
-                R.id.nav_radio -> selectedFragment = RadioFragment()
                 R.id.nav_library -> selectedFragment = LibraryFragment()
                 R.id.nav_favorites -> selectedFragment = FavoritesFragment()
             }

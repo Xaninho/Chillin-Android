@@ -2,14 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_radio"
-        android:icon="@drawable/ic_radio"
-        android:title="@string/Radio"
-        android:visible="true"
-        android:enabled="true"
-        />
-
-    <item
         android:id="@+id/nav_library"
         android:icon="@drawable/ic_library"
         android:title="@string/Library"
