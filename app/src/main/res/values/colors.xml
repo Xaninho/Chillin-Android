@@ -19,6 +19,9 @@
     <color name="colorPrimaryDark">#5B119A</color>
     <color name="colorAccent">#0BD5D5</color>
 
+    <color name="colorWhite">#ffffff</color>
+    <color name="darkerWhite">#A3A3A3</color>
+
     <color name="materialBlack">#212121</color>
     <color name="materialGray">#313131</color>
     <color name="lightGray">#D3D3D3</color>
