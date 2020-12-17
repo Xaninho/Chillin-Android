@@ -2,11 +2,11 @@
 <br />
 <p align="center">
   
-  <img src="https://cdn3.iconfinder.com/data/icons/multimedia-19/512/Cassette-512.png" alt="Logo" width="150" height="150">
+  <img src="https://raw.githubusercontent.com/Xaninho/Chillin/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" alt="Logo" width="150" height="150">
   <h3 align="center">Chillin'</h3>
 
   <p align="center">
-    Brain Food from Heaven's Kitchen :notes: :ramen:
+    Lo-Fi Android Streamer :radio: :ramen:
     <br />
     <a href="https://github.com/Xaninho/Chillin/wiki"><strong>Explore the Wiki</strong></a>
     <br />
@@ -22,9 +22,11 @@
 
 ## About The Project
 
-:hammer: This project is currently under construction and in its early stages! :wrench:
+:hammer: This project is currently under development and almost deployed! :wrench:
 
-Chillin is an independent project currently developed by a student, with the scope of creating a convenient Lo-Fi on-line music repository, offering the user access to an online radio and to several playlists placed and verified by the author of the application.
+Chillin' is an independent project currently developed by a student, with the scope of creating a convenient Lo-Fi on-line music repository, offering the user access to an online radio and to several playlists placed and verified by the author of the application.
+
+Future updates and features are going to be developed such as timers, integrated radio, offline play & more.
 
 It's built on top of the [UAMP](https://github.com/android/uamp) architecture, which is the most solid way to begin developing an Audio app.
 
@@ -35,16 +37,7 @@ It's built on top of the [UAMP](https://github.com/android/uamp) architecture, w
 
 ## Contributing
 
-Contributions are always welcome! There are always room for improvements and any tips you could give to the community would be **greatly appreciated** as well!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-## Contact
+Contributions and ideas are always welcome! There are always room for improvements and any tips you could give to the community would be **greatly appreciated** as well :bento:
 
 Project Link: [https://github.com/Xaninho/Chillin](https://github.com/Xaninho/Chillin)
 LinkedIn: [Alexandre Neves](https://www.linkedin.com/in/alexandre-neves-ninja/)
