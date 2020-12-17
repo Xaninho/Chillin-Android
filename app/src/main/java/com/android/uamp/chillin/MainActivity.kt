@@ -17,10 +17,13 @@
 package com.android.uamp.chillin
 
 import android.media.AudioManager
+import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import androidx.activity.viewModels
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.android.uamp.chillin.fragments.FavoritesFragment

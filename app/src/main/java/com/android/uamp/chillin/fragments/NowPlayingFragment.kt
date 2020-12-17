@@ -69,11 +69,6 @@ class NowPlayingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val toolbar: Toolbar = view.findViewById(R.id.toolbar)
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back)
-        toolbar.title = "Music Playing"
-        toolbar.setNavigationOnClickListener { activity?.onBackPressed() }
-
         // Always true, but lets lint know that as well.
         val context = activity ?: return
 
@@ -118,6 +113,8 @@ class NowPlayingFragment : Fragment() {
             override fun onStartTrackingTouch(seekBar: SeekBar) {}
             override fun onStopTrackingTouch(seekBar: SeekBar) {}
         })
+
+        binding.backButton.setOnClickListener { activity?.onBackPressed() }
 
         // Initialize playback duration and position to zero
         binding.duration.text = NowPlayingMetadata.timestampToMSS(context, 0L)

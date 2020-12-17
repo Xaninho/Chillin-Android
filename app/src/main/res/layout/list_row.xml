@@ -3,23 +3,28 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="5dip">
+    android:padding="5dip"
+    android:layout_margin="30dp">
 
     <TextView
         android:id="@+id/name"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1dp"
         android:fontFamily="@font/brushsci"
+        android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="25sp" />
 
     <TextView
         android:id="@+id/artist"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/name"
         android:layout_marginTop="7dp"
-        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:textColor="@color/lightGray"
         android:textSize="15sp" />
 
 </RelativeLayout>

@@ -19,94 +19,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/materialGray">
+    android:background="@color/materialBlack"
+    android:fitsSystemWindows="true">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:fitsSystemWindows="true"
-        android:minHeight="?attr/actionBarSize"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-    <ImageView
-        android:id="@+id/albumArt"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="40dp"
-        android:contentDescription="@string/album_art_alt"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@android:color/transparent" />
+        <ImageView
+            android:id="@+id/albumArt"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:contentDescription="@string/album_art_alt"
+            android:scaleType="centerCrop"
+            app:srcCompat="@android:color/transparent" />
+
+    </androidx.cardview.widget.CardView>
 
     <ImageButton
         android:id="@+id/media_button"
-        android:layout_width="88dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="15dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
         android:background="?attr/selectableItemBackground"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/skip_next"
-        app:layout_constraintStart_toEndOf="@+id/skip_previous"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seekBar"
         app:srcCompat="@drawable/ic_play"
         tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/skip_next"
-        android:layout_width="69dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
         android:background="?attr/selectableItemBackground"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/favorite_button"
+        app:layout_constraintStart_toEndOf="@+id/media_button"
         app:layout_constraintTop_toBottomOf="@+id/seekBar"
         app:srcCompat="@drawable/ic_skip_next"
         tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/skip_previous"
-        android:layout_width="69dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="16dp"
-
-        android:layout_marginTop="32dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
         android:background="?attr/selectableItemBackground"
         android:scaleType="fitCenter"
-        app:layout_constraintStart_toEndOf="@+id/artist_info"
+        app:layout_constraintEnd_toStartOf="@+id/media_button"
         app:layout_constraintTop_toBottomOf="@+id/seekBar"
         app:srcCompat="@drawable/ic_skip_previous"
         tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/artist_info"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="56dp"
         android:background="?attr/selectableItemBackground"
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seekBar"
-        app:srcCompat="@drawable/ic_user_info"
+        app:srcCompat="@drawable/ic_clipboard"
         tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/favorite_button"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="24dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="35dp"
         android:background="?attr/selectableItemBackground"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,31 +108,62 @@
         app:srcCompat="@drawable/ic_fav_empty"
         tools:ignore="ContentDescription" />
 
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/info_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_info"
+        tools:ignore="ContentDescription" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="299dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="15dp"
         android:ellipsize="end"
+        android:fontFamily="@font/brushsci"
         android:maxLines="1"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.Uamp.Title"
+        android:textColor="@color/colorAccent"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/albumArt"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
         tools:text="Song Title" />
 
     <TextView
         android:id="@+id/subtitle"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="5dp"
         android:ellipsize="end"
         android:maxLines="1"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.Uamp.Subtitle"
+        android:textColor="@color/lightGray"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
         tools:text="Artist" />
@@ -148,10 +173,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="5dp"
         android:ellipsize="end"
         android:maxLines="1"
         android:textAppearance="@style/TextAppearance.Uamp.Title"
+        android:textColor="@color/lightGray"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="0:00" />
@@ -161,21 +188,38 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="5dp"
         android:ellipsize="end"
         android:maxLines="1"
         android:textAppearance="@style/TextAppearance.Uamp.Subtitle"
+        android:textColor="@color/lightGray"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="0:00" />
 
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_width="359dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="378dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="35dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="278dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/brushsci"
+        android:text="Morning Coffee"
+        android:textAlignment="center"
+        android:textColor="@color/lightGray"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/info_button"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,29 +14,40 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/materialBlack"
+    android:fitsSystemWindows="true">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:name="com.android.uamp.chillin.MediaItemFragment"
         style="@style/MediaItemList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="453dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:context="com.android.uamp.chillin.fragments.MediaItemFragment"
         tools:listitem="@layout/fragment_mediaitem"
-        android:background="@color/materialBlack"/>
+        android:background="@color/transparent"/>
 
     <ProgressBar
         android:id="@+id/loadingSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="303dp" />
 
     <ImageView
         android:id="@+id/networkError"
@@ -44,8 +55,64 @@
         android:layout_height="64dp"
         android:layout_gravity="center"
         android:visibility="gone"
-        app:srcCompat="@drawable/ic_signal_wifi_off_black_24dp"
+        app:srcCompat="@drawable/ic_signal_wifi_off"
         app:tint="@color/colorAccent" />
 
-</FrameLayout>
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/info_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_info"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="94dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="150dp"
+        app:srcCompat="@drawable/ic_coffee" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView4"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="74dp"
+        android:fontFamily="@font/brushsci"
+        android:text="Morning Coffee"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="45sp" />
+
+</RelativeLayout>
 
