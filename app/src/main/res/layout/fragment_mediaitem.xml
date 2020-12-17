@@ -14,12 +14,20 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
+    app:cardCornerRadius="6dp">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
     android:background="@color/materialGray">
 
     <ImageView
@@ -67,7 +75,9 @@
         app:layout_constraintLeft_toRightOf="@+id/albumArt"
         app:layout_constraintRight_toRightOf="parent"
         tools:text="Song Title"
-        android:textColor="@color/lightGray"/>
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        android:fontFamily="@font/brushsci"/>
 
     <TextView
         android:id="@+id/subtitle"
@@ -81,7 +91,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/center_guideline"
         tools:text="Artist"
-        android:textColor="@color/lightGray"/>
+        android:textColor="@color/lightGray"
+        android:textSize="15sp"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/center_guideline"
@@ -90,4 +101,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -21,9 +21,6 @@
         android:right="@dimen/media_item_negative_half_radius"
         android:top="@dimen/media_item_negative_half_radius">
         <shape android:shape="rectangle">
-            <stroke
-                android:width="@dimen/media_item_half_radius"
-                android:color="@color/mediaListBackground" />
             <corners
                 android:bottomLeftRadius="@dimen/media_item_radius"
                 android:bottomRightRadius="0dp"

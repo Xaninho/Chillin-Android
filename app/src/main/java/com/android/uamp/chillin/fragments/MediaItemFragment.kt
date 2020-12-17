@@ -89,6 +89,8 @@ class MediaItemFragment : Fragment() {
 
         // Set the adapter
         binding.list.adapter = listAdapter
+
+        binding.backButton.setOnClickListener { activity?.onBackPressed() }
     }
 }
 

@@ -4,7 +4,8 @@
     android:fillViewport="true"
     android:scrollbars="none"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,16 +13,30 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="366dp"
-            android:layout_height="112dp"
+            android:layout_width="365dp"
+            android:layout_height="115dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="29dp"
-            app:srcCompat="@drawable/library_title"
-            android:contentDescription="@string/contentDescription_titleLibrary" />
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="22dp"
+            android:contentDescription="@string/contentDescription_titleLibrary"
+            app:srcCompat="@drawable/library_title" />
+
+        <ImageButton
+            android:id="@+id/info_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_info" />
 
         <ImageButton
             android:id="@+id/btn_coffee"
